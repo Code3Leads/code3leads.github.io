@@ -68,10 +68,14 @@
 <!-- HERO -->
 <section class="hero">
 
-<h1>Never Miss Another Customer Call</h1>
+<h1>Stop Losing Customers From Missed Calls</h1>
+
+<p>
+Turn missed calls into captured leads with automation, AI chat, and follow-up systems built for small businesses.
+</p>
 
 <p class="hero-sub">
-Turn missed calls into captured leads with automation, AI chat, and follow-up systems built for small businesses.
+Every missed call could be a paying customer choosing someone else.
 </p>
 
 </section>
@@ -122,7 +126,7 @@ Every missed call is a missed opportunity.
 
 </section>
 
-<!-- MAIN CTA -->
+<!-- CTA -->
 <section class="cta-section">
 
 <h2>Ready to Capture More Leads?</h2>
@@ -132,7 +136,7 @@ See how this system works for your business in a free consultation.
 </p>
 
 <a href="https://calendly.com/code3leads/30min" target="_blank" class="button">
-Schedule a Free Consultation
+See How This Works For My Business
 </a>
 
 </section>
@@ -158,6 +162,10 @@ Even a few missed calls per week can cost thousands in lost business.
 
   <h3 id="result"></h3>
 
+  <p style="font-size:14px; opacity:0.6;">
+    Most businesses underestimate how many calls they miss each week.
+  </p>
+
   <a id="calc-cta" href="https://calendly.com/code3leads/30min" target="_blank" class="button" style="display:none;">
     Fix This For My Business
   </a>
@@ -180,7 +188,7 @@ function calculateLoss() {
   var yearlyLoss = calls * value * 52;
 
   document.getElementById("result").innerText =
-    "You're potentially losing $" + yearlyLoss.toLocaleString() + " per year";
+    "You're losing approximately $" + yearlyLoss.toLocaleString() + " per year from missed calls";
 
   document.getElementById("calc-cta").style.display = "inline-block";
 }
