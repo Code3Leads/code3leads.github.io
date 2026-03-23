@@ -186,6 +186,35 @@ p {
 }
 
 /* =========================
+   TOP SECTION IMPROVEMENTS
+========================= */
+
+/* tighten spacing at top */
+.work-section {
+  padding-top: 40px;
+}
+
+/* space between text and button */
+.work-section .button {
+  margin-top: 25px;
+}
+
+/* make top CTA stand out slightly */
+.work-section .button {
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.25);
+}
+
+/* hero now sits lower - reduce padding */
+.hero {
+  padding: 60px 20px;
+}
+
+/* improve visual separation */
+.work-section h2 {
+  margin-top: 25px;
+}
+
+/* =========================
    MOBILE
 ========================= */
 @media (max-width: 600px) {
