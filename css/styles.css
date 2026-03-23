@@ -68,6 +68,21 @@ p {
   background: #be123c;
 }
 
+/* IMAGES */
+.hero-img {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.section-img {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
 /* CARD GRID */
 .grid {
   display: flex;
