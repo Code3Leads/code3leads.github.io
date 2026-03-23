@@ -270,16 +270,22 @@ p {
 }
 
 /* =========================
-   PORTFOLIO
+   PORTFOLIO ELITE FINAL
 ========================= */
+
 .portfolio-hero {
   padding: 80px 20px;
 }
 
-/* =========================
-   PORTFOLIO ELITE FIX
-========================= */
+/* GRID */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
 
+/* CARD */
 .portfolio-card {
   position: relative;
   display: block;
@@ -289,21 +295,28 @@ p {
   transition: 0.3s;
 }
 
-/* DARKEN IMAGE */
+/* DARK OVERLAY LAYER (KEY FIX) */
+.portfolio-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+/* IMAGE */
 .portfolio-card img {
   width: 100%;
   height: 260px;
   object-fit: cover;
   transition: 0.3s;
-  filter: brightness(0.75);
 }
 
 .portfolio-card:hover img {
   transform: scale(1.05);
-  filter: brightness(0.9);
 }
 
-/* STRONGER OVERLAY */
+/* TEXT OVERLAY */
 .portfolio-overlay {
   position: absolute;
   bottom: 0;
@@ -314,12 +327,15 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 6px;
+
+  z-index: 2;
 
   background: linear-gradient(
     to top,
     rgba(0,0,0,1),
-    rgba(0,0,0,0.8),
-    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.4),
     transparent
   );
 }
@@ -334,18 +350,18 @@ p {
 
 /* DESCRIPTION */
 .portfolio-overlay p {
-  margin: 6px 0;
+  margin: 0;
   font-size: 14px;
-  color: #94a3b8;
+  color: #cbd5f5;
 }
 
-/* CTA */
+/* CTA TEXT */
 .portfolio-overlay span {
-  margin-top: 6px;
   font-size: 14px;
   color: #e11d48;
   font-weight: bold;
 }
+
 /* =========================
    MOBILE
 ========================= */
