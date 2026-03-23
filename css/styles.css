@@ -86,6 +86,13 @@ p {
   padding: 60px 20px;
 }
 
+/* EXPENSIVE GRADIENT TEXT */
+.hero h1 {
+  background: linear-gradient(to right, #ffffff, #e11d48);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero-sub {
   color: #94a3b8;
   margin-top: 10px;
@@ -196,6 +203,14 @@ p {
     rgba(0,0,0,0.3),
     transparent
   );
+}
+
+/* =========================
+   PROBLEM SECTION
+========================= */
+.problem-section .highlight {
+  color: #22c55e;
+  font-weight: 600;
 }
 
 /* =========================
