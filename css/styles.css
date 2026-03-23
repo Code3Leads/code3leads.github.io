@@ -86,7 +86,6 @@ p {
   padding: 60px 20px;
 }
 
-/* EXPENSIVE GRADIENT TEXT */
 .hero h1 {
   background: linear-gradient(to right, #ffffff, #e11d48);
   -webkit-background-clip: text;
@@ -120,7 +119,7 @@ p {
 }
 
 /* =========================
-   CARD GRID (SERVICES)
+   GRID (SERVICES)
 ========================= */
 .grid {
   display: flex;
@@ -145,7 +144,7 @@ p {
 }
 
 /* =========================
-   WORK / IMAGE SECTION
+   WORK SECTION
 ========================= */
 .work-section {
   padding: 60px 20px;
@@ -169,7 +168,6 @@ p {
   position: relative;
   overflow: hidden;
   border-radius: 14px;
-  cursor: pointer;
   transition: 0.25s;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
@@ -183,10 +181,6 @@ p {
 
 .work-card:hover img {
   transform: scale(1.08);
-}
-
-.work-card:hover {
-  transform: translateY(-4px);
 }
 
 .overlay {
@@ -206,7 +200,7 @@ p {
 }
 
 /* =========================
-   PROBLEM SECTION
+   PROBLEM
 ========================= */
 .problem-section .highlight {
   color: #22c55e;
@@ -214,7 +208,7 @@ p {
 }
 
 /* =========================
-   CTA SECTION
+   CTA
 ========================= */
 .cta-section {
   padding: 80px 20px;
@@ -241,7 +235,6 @@ p {
 .calculator-box label {
   display: block;
   margin-top: 15px;
-  margin-bottom: 5px;
   text-align: left;
 }
 
@@ -250,14 +243,13 @@ p {
   padding: 10px;
   border-radius: 6px;
   border: none;
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-top: 5px;
 }
 
 .calculator-box button {
   width: 100%;
   padding: 12px;
-  margin-top: 10px;
+  margin-top: 15px;
   background: #e11d48;
   color: white;
   border: none;
@@ -275,6 +267,62 @@ p {
   font-size: 24px;
   font-weight: bold;
   color: #22c55e;
+}
+
+/* =========================
+   PORTFOLIO
+========================= */
+.portfolio-hero {
+  padding: 80px 20px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.portfolio-card {
+  position: relative;
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.08);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0.4),
+    transparent
+  );
+}
+
+.portfolio-overlay h3 {
+  margin: 0;
+}
+
+.portfolio-overlay span {
+  color: #e11d48;
+  font-weight: bold;
 }
 
 /* =========================
@@ -307,8 +355,4 @@ footer {
 footer a {
   color: white;
   text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
