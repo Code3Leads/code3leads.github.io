@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Code 3 Leads</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
+<style>
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #1f2937;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #020617;
+  color: white;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+.checkbox {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #e11d48;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #be123c;
+}
+</style>
+</head>
+
+<body style="margin:0; font-family:Arial; background:#020617; color:white;">
+
+<header style="padding:20px; text-align:center;">
+  <img src="images/code3-logo.png" style="width:240px;">
+  <p style="margin-top:10px; color:#e11d48; font-weight:bold;">
+    🇺🇸 Veteran Owned & Operated
+  </p>
+</header>
+
+<section class="form-container">
+
+<h2>Request Service</h2>
+
+<form>
+
+<label>Name</label>
+<input type="text" placeholder="Your Name" required>
+
+<label>Phone Number</label>
+<input type="tel" placeholder="Your Phone Number" required>
+
+<label>How can we help?</label>
+<textarea placeholder="Describe your issue or request..." required></textarea>
+
+<div class="checkbox">
+  <input type="checkbox" required>
+  I agree to receive text messages from Code 3 Leads regarding my request. Message frequency varies. Message & data rates may apply. Reply STOP to opt out.
+</div>
+
+<button type="submit">Submit Request</button>
+
+</form>
+
+</section>
+
+</body>
+</html>
