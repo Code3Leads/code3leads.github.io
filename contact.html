@@ -96,10 +96,24 @@ button:hover {
 </div>
 
 <button type="submit">Submit Request</button>
-
+<p id="confirmation" style="display:none; color:lime; margin-top:10px;">
+Request submitted successfully.
+</p>
+  
 </form>
 
 </section>
+
+</section>
+
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  document.getElementById("confirmation").style.display = "block";
+  document.querySelector("button").innerText = "Submitted";
+});
+</script>
 
 </body>
 </html>
