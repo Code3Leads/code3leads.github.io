@@ -121,11 +121,48 @@ Request submitted successfully.
 </section>
 
 <script>
-document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault();
+document.querySelector("form").addEventListener("submit", async function(e) {
 
-  document.getElementById("confirmation").style.display = "block";
-  document.querySelector("button").innerText = "Submitted";
+    e.preventDefault();
+
+    const inputs = document.querySelectorAll("input");
+    const textarea = document.querySelector("textarea");
+
+    const data = {
+        name: inputs[0].value,
+        email: inputs[1].value,
+        phone: inputs[2].value,
+        service: "Main Website Contact Form",
+        message: textarea.value
+    };
+
+    try {
+
+        await fetch(
+            "https://show-runner-backend.onrender.com/lead",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }
+        );
+
+        document.getElementById("confirmation").style.display = "block";
+        document.querySelector("button").innerText = "Submitted";
+
+    }
+    catch(error){
+
+        console.error(error);
+
+        document.getElementById("confirmation").innerText =
+        "Submission failed. Please try again.";
+
+        document.getElementById("confirmation").style.display = "block";
+    }
+
 });
 </script>
 
