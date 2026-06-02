@@ -10,7 +10,7 @@
 
 <style>
 .form-container {
-  max-width: 500px;
+  max-width: 900px;
   margin: 40px auto;
   background: #1f2937;
   padding: 25px;
@@ -34,7 +34,7 @@ input, textarea {
 
 textarea {
   resize: none;
-  height: 120px;
+  height: 180px;
 }
 
 .checkbox {
@@ -72,25 +72,87 @@ button:hover {
 
 <section class="form-container">
 
-<h2>Request Service</h2>
+<h1>Let's Talk About Your Business</h1>
+
+<p>
+Whether you need a website, lead generation, automation, or a complete business growth solution, we're here to help.
+</p>
+
+<div class="contact-layout">
+
+  <div class="contact-info">
+
+    <h3>🇺🇸 Veteran Owned & Operated</h3>
+<p>Baltimore County, Maryland</p>
+
+<hr style="border-color:#374151; margin:20px 0;">
+
+<h3>📞 Call Us</h3>
+<p>
+<a href="tel:4432229649"
+   style="color:#e11d48; text-decoration:none; font-weight:bold;">
+   (443) 222-9649
+</a>
+</p>
+
+<h3>✉️ Email Us</h3>
+<p>
+<a href="mailto:code3leads@gmail.com"
+   style="color:#e11d48; text-decoration:none; font-weight:bold;">
+   code3leads@gmail.com
+</a>
+</p>
+
+<hr style="border-color:#374151; margin:20px 0;">
+
+<h3>📅 Schedule A Consultation</h3>
+
+<p>
+Prefer to book a time directly?
+</p>
+
+<a href="https://calendly.com/code3leads/30min"
+   target="_blank"
+   class="button"
+   style="display:block; margin-top:10px;">
+   Schedule Now
+</a>
+
+  </div>
+
+  <div class="contact-form">
 
 <form>
 
-<label>Name</label>
 <input type="text" placeholder="Your Name" required>
 
-<label>Email</label>
 <input type="email" placeholder="Your Email Address" required>
 
-<label>Phone Number (Optional)</label>
 <input type="tel" placeholder="Your Phone Number">
 
 <p style="font-size:13px; color:#9ca3af; margin-top:6px;">
 Providing a phone number allows us to contact you regarding your request.
 </p>
 
-<label>How can we help?</label>
-<textarea placeholder="Describe your issue or request..." required></textarea>
+<label>Service Interested In</label>
+
+<select id="service" style="
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:6px;
+border:none;
+background:#020617;
+color:white;
+">
+  <option value="" disabled selected>Select a service</option>
+  <option>Website Design</option>
+  <option>Show Runner</option>
+  <option>Growth Package</option>
+  <option>AI & Automation</option>
+</select>
+
+<textarea placeholder="Tell us about your business and what you're looking to accomplish..." required></textarea>
 
 <div class="checkbox">
 
@@ -104,9 +166,17 @@ Providing a phone number allows us to contact you regarding your request.
 
 <br>
 
-<a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+<div class="policy-links">
+
+<a href="privacy-policy.html" target="_blank">
+Privacy Policy
+</a>
+
 &nbsp;|&nbsp;
-<a href="terms.html" target="_blank">Terms of Service</a>
+
+<a href="terms.html" target="_blank">
+Terms of Service
+</a>
 
 </div>
 
@@ -117,6 +187,9 @@ Request submitted successfully.
 </p>
 
 </form>
+
+</div>
+</div>
 
 </section>
 
@@ -132,7 +205,7 @@ document.querySelector("form").addEventListener("submit", async function(e) {
         name: inputs[0].value,
         email: inputs[1].value,
         phone: inputs[2].value,
-        service: "Main Website Contact Form",
+        service: document.getElementById("service").value,
         message: textarea.value
     };
 

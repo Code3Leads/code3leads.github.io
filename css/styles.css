@@ -75,11 +75,15 @@ p {
   margin-right: auto;
 }
 
+.services-section {
+  padding-top: 20px;
+}
+
 /* =========================
    HERO
 ========================= */
 .hero {
-  padding: 60px 20px;
+  padding: 40px 20px 20px;
 }
 
 .hero h1 {
@@ -112,6 +116,16 @@ p {
   background: #be123c;
   transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(225,29,72,0.35);
+}
+
+.policy-links a {
+  color: #e11d48;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.policy-links a:hover {
+  color: #ff4d6d;
 }
 
 /* =========================
@@ -193,6 +207,46 @@ p {
     rgba(0,0,0,0.3),
     transparent
   );
+}
+
+.contact-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 0.7;
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.contact-form {
+  flex: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .contact-layout {
+    flex-direction: column;
+  }
 }
 
 /* =========================
