@@ -153,6 +153,46 @@ p {
   box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
+.project-item {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.project-thumb {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-content ul {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.project-features {
+  margin: 15px 0;
+}
+
+.project-features p {
+  margin: 8px 0;
+}
+@media (max-width: 768px) {
+
+  .project-item {
+    flex-direction: column;
+  }
+
+  .project-thumb {
+    width: 100%;
+  }
+
+}
+
 /* =========================
    WORK SECTION
 ========================= */
