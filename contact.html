@@ -214,12 +214,14 @@ document.querySelector("form").addEventListener("submit", async function(e) {
     const textarea = document.querySelector("textarea");
 
     const data = {
-        name: inputs[0].value,
-        email: inputs[1].value,
-        phone: inputs[2].value,
-        service: document.getElementById("service").value,
-        message: textarea.value
-    };
+    business: "code3",
+
+    name: inputs[0].value,
+    email: inputs[1].value,
+    phone: inputs[2].value,
+    service: document.getElementById("service").value,
+    message: textarea.value
+};
 
     try {
 
